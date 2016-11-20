@@ -25,6 +25,8 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.exception.ExpenseManagerEx
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.AccountDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.TransactionDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.exception.InvalidAccountException;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.InMemoryAccountDAO;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistantTransactionDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Account;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.ExpenseType;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Transaction;
@@ -33,7 +35,7 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Transaction;
  * The ExpenseManager acts as the mediator when performing transactions. This is an abstract class with an abstract
  * method to setup the DAO objects depending on the implementation.
  */
-public abstract class ExpenseManager implements Serializable {
+public abstract  class ExpenseManager implements Serializable {
     private AccountDAO accountsHolder;
     private TransactionDAO transactionsHolder;
 
